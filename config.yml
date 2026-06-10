@@ -1,0 +1,154 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "imagenes"
+public_folder: "/imagenes"
+
+locale: "es"
+
+collections:
+  - name: "config"
+    label: "⚙️ Configuración del sitio"
+    files:
+      - name: "general"
+        label: "🏨 Identidad y contacto"
+        file: "_data/config.json"
+        fields:
+          - label: "Nombre del negocio"
+            name: "negocio"
+            widget: "string"
+            hint: "Ej: Refugio Aysén"
+
+          - label: "Letra del logo"
+            name: "inicial"
+            widget: "string"
+            hint: "Solo 1 carácter. Ej: R"
+            pattern: ['^.$', "Solo 1 carácter"]
+
+          - label: "Tagline (texto pequeño del hero)"
+            name: "tagline"
+            widget: "string"
+            hint: "Ej: Patagonia · Coyhaique"
+
+          - label: "─── Contacto ───"
+            name: "separador1"
+            widget: "hidden"
+            default: ""
+
+          - label: "Teléfono WhatsApp (solo números con código de país)"
+            name: "telefono"
+            widget: "string"
+            hint: "Chile: 569XXXXXXXX · Argentina: 549XXXXXXXXXX · Sin +, espacios ni guiones"
+
+          - label: "Teléfono visible (formato libre)"
+            name: "telTexto"
+            widget: "string"
+            hint: "Ej: +56 9 1234-5678"
+
+          - label: "Email"
+            name: "email"
+            widget: "string"
+            hint: "Ej: reservas@tunegocio.com"
+
+          - label: "Dirección"
+            name: "direccion"
+            widget: "string"
+            hint: "Ej: Camino al Lago Km 4, Coyhaique"
+
+          - label: "Mensaje de WhatsApp predefinido"
+            name: "whatsappMensaje"
+            widget: "string"
+            hint: "Texto que aparece al abrir WhatsApp"
+            default: "Hola 👋 Vi su sitio web y me gustaría consultar disponibilidad."
+
+          - label: "─── Redes sociales ───"
+            name: "separador2"
+            widget: "hidden"
+            default: ""
+
+          - label: "Instagram (URL completa)"
+            name: "instagram"
+            widget: "string"
+            required: false
+            hint: "Ej: https://instagram.com/tu_cuenta · Dejá vacío para ocultar"
+
+          - label: "Facebook (URL completa)"
+            name: "facebook"
+            widget: "string"
+            required: false
+            hint: "Ej: https://facebook.com/tu_cuenta · Dejá vacío para ocultar"
+
+          - label: "TikTok (URL completa)"
+            name: "tiktok"
+            widget: "string"
+            required: false
+            hint: "Ej: https://tiktok.com/@tu_cuenta · Dejá vacío para ocultar"
+
+          - label: "─── Formulario de contacto ───"
+            name: "separador3"
+            widget: "hidden"
+            default: ""
+
+          - label: "Formspree endpoint"
+            name: "formspree"
+            widget: "string"
+            required: false
+            hint: "Ej: https://formspree.io/f/xxxxxxx · Dejá vacío para modo demo"
+
+          - label: "─── SEO ───"
+            name: "separador4"
+            widget: "hidden"
+            default: ""
+
+          - label: "Título de la pestaña del navegador"
+            name: "seoTitle"
+            widget: "string"
+            hint: "Ej: Refugio Aysén — Cabañas & Tinajas"
+
+          - label: "Descripción para Google"
+            name: "seoDescription"
+            widget: "text"
+            hint: "Máximo 160 caracteres. Es el texto que aparece debajo del título en Google."
+
+          - label: "─── Imágenes ───"
+            name: "separador5"
+            widget: "hidden"
+            default: ""
+
+          - label: "Imagen Hero (fondo principal)"
+            name: "imgHero"
+            widget: "image"
+            required: false
+            hint: "Foto horizontal de alta resolución"
+
+          - label: "Imagen Nosotros"
+            name: "imgAbout"
+            widget: "image"
+            required: false
+            hint: "Foto vertical para la sección About"
+
+          - label: "Galería — Foto 1 (grande)"
+            name: "imgG1"
+            widget: "image"
+            required: false
+
+          - label: "Galería — Foto 2"
+            name: "imgG2"
+            widget: "image"
+            required: false
+
+          - label: "Galería — Foto 3"
+            name: "imgG3"
+            widget: "image"
+            required: false
+
+          - label: "Galería — Foto 4"
+            name: "imgG4"
+            widget: "image"
+            required: false
+
+          - label: "Galería — Foto 5"
+            name: "imgG5"
+            widget: "image"
+            required: false
